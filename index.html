@@ -4,7 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>グランドスラム英単語準２級対応</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;background:#f5f7fb;color:#172033}body{display:flex;justify-content:center}.app{width:min(720px,100%);padding:24px 16px 48px}.hero{text-align:center;padding:22px 10px 18px}.eyebrow{font-size:.75rem;font-weight:800;letter-spacing:.14em;color:#667085;margin:0 0 8px}.hero h1{font-size:clamp(2rem,8vw,3.4rem);line-height:1.08;margin:0 0 12px;letter-spacing:-.04em}.hero p{margin:0;color:#667085}.card{background:#fff;border:1px solid #e6eaf0;border-radius:24px;padding:24px;box-shadow:0 14px 40px rgba(23,32,51,.07)}.card h2{margin:0 0 18px;font-size:1.35rem}.levels{display:grid;gap:12px}.level{appearance:none;text-align:left;border:2px solid #e3e7ee;background:#fff;border-radius:16px;padding:17px 18px;cursor:pointer;transition:.18s}.level:hover,.level:focus{border-color:#4f46e5;transform:translateY(-1px)}.level span{display:block;font-size:.72rem;font-weight:800;color:#667085;letter-spacing:.08em}.level strong{display:block;font-size:1.12rem;margin:3px 0}.level small{color:#667085}.rules{margin-top:22px;background:#f7f8fc;border-radius:16px;padding:16px 18px}.rules h3{margin:0 0 8px;font-size:1rem}.rules ul{margin:0;padding-left:20px;line-height:1.9}.source{font-size:.75rem;color:#98a2b3;margin:16px 2px 0}.hidden{display:none!important}.topbar,.progressRow{display:flex;align-items:center;justify-content:space-between;gap:12px}.textBtn{border:0;background:none;color:#667085;padding:0;cursor:pointer}.badge{font-size:.78rem;font-weight:800;padding:6px 10px;border-radius:999px;background:#eef0ff;color:#4038b5}.progressRow{margin-top:22px;font-size:.86rem;font-weight:700}.progress{height:8px;background:#edf0f5;border-radius:999px;overflow:hidden;margin:10px 0 28px}.progress div{height:100%;width:0;background:#4f46e5;border-radius:inherit;transition:width .25s}.question{text-align:center;padding:16px 0 24px}.questionLabel{margin:0 0 8px;color:#667085;font-size:.9rem}.question h2{font-size:clamp(2.2rem,10vw,4rem);margin:0;letter-spacing:.01em}.choices{display:grid;grid-template-columns:1fr 1fr;gap:12px}.choice{border:2px solid #e3e7ee;background:#fff;border-radius:16px;min-height:72px;padding:14px;cursor:pointer;font-size:1rem;font-weight:700;color:#172033;transition:.15s}.choice:hover:not(:disabled){border-color:#4f46e5;background:#f8f8ff}.choice:disabled{cursor:default}.choice.correct{border-color:#16a34a;background:#f0fdf4}.choice.wrong{border-color:#dc2626;background:#fef2f2}.feedback{text-align:center;min-height:28px;font-weight:800;margin:18px 0 0}.feedback.ok{color:#15803d}.feedback.ng{color:#b91c1c}.result{text-align:center;padding:34px 24px}.resultIcon{font-size:4rem;line-height:1;margin-bottom:10px}.result h2{font-size:2rem;margin:4px 0 8px}.result p:not(.eyebrow){color:#667085}.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0}.stats div{background:#f7f8fc;border-radius:14px;padding:14px}.stats span{display:block;color:#667085;font-size:.78rem}.stats strong{font-size:1.5rem}.resultActions{display:grid;gap:10px}.primary,.secondary{border:0;border-radius:14px;padding:14px;font-weight:800;font-size:1rem;cursor:pointer}.primary{background:#172033;color:#fff}.secondary{background:#eef0f5;color:#172033}@media(max-width:520px){.choices{grid-template-columns:1fr}.card{padding:20px}.hero{padding-top:10px}}
+
+.timer{text-align:center;font-size:1.5rem;font-weight:800;margin:6px 0 14px}.timer.danger{font-weight:900;transform:scale(1.05)}
+
+</style>
 </head>
 <body>
   <main class="app">
@@ -69,7 +74,2020 @@
       </div>
     </section>
   </main>
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <script>
+const WORDS = [
+  {
+    "id": 1,
+    "word": "purpose",
+    "meaning": "目的、意図",
+    "rank": "S"
+  },
+  {
+    "id": 2,
+    "word": "reason",
+    "meaning": "理由、動機",
+    "rank": "S"
+  },
+  {
+    "id": 3,
+    "word": "opinion",
+    "meaning": "意見、考え",
+    "rank": "S"
+  },
+  {
+    "id": 4,
+    "word": "advantage",
+    "meaning": "利点、長所",
+    "rank": "S"
+  },
+  {
+    "id": 5,
+    "word": "solution",
+    "meaning": "解決策",
+    "rank": "S"
+  },
+  {
+    "id": 6,
+    "word": "custom",
+    "meaning": "習慣、風習",
+    "rank": "S"
+  },
+  {
+    "id": 7,
+    "word": "freedom",
+    "meaning": "自由",
+    "rank": "S"
+  },
+  {
+    "id": 8,
+    "word": "knowledge",
+    "meaning": "知識",
+    "rank": "S"
+  },
+  {
+    "id": 9,
+    "word": "excuse",
+    "meaning": "言い訳、釈明",
+    "rank": "S"
+  },
+  {
+    "id": 10,
+    "word": "direction",
+    "meaning": "方向、指示",
+    "rank": "S"
+  },
+  {
+    "id": 11,
+    "word": "variety",
+    "meaning": "多様性、種類",
+    "rank": "S"
+  },
+  {
+    "id": 12,
+    "word": "behavior",
+    "meaning": "振る舞い、態度",
+    "rank": "S"
+  },
+  {
+    "id": 13,
+    "word": "disease",
+    "meaning": "病気、疾患",
+    "rank": "S"
+  },
+  {
+    "id": 14,
+    "word": "operation",
+    "meaning": "手術、操作",
+    "rank": "S"
+  },
+  {
+    "id": 15,
+    "word": "stranger",
+    "meaning": "見知らぬ人、他人",
+    "rank": "S"
+  },
+  {
+    "id": 16,
+    "word": "accident",
+    "meaning": "事故、災難",
+    "rank": "S"
+  },
+  {
+    "id": 17,
+    "word": "appointment",
+    "meaning": "約束、予約",
+    "rank": "S"
+  },
+  {
+    "id": 18,
+    "word": "audience",
+    "meaning": "聴衆、観客",
+    "rank": "S"
+  },
+  {
+    "id": 19,
+    "word": "benefit",
+    "meaning": "利益、手当",
+    "rank": "S"
+  },
+  {
+    "id": 20,
+    "word": "chance",
+    "meaning": "機会、チャンス",
+    "rank": "S"
+  },
+  {
+    "id": 21,
+    "word": "climate",
+    "meaning": "気候",
+    "rank": "S"
+  },
+  {
+    "id": 22,
+    "word": "colleague",
+    "meaning": "同僚",
+    "rank": "S"
+  },
+  {
+    "id": 23,
+    "word": "communication",
+    "meaning": "意思疎通",
+    "rank": "S"
+  },
+  {
+    "id": 24,
+    "word": "community",
+    "meaning": "地域社会",
+    "rank": "S"
+  },
+  {
+    "id": 25,
+    "word": "company",
+    "meaning": "会社、同席",
+    "rank": "S"
+  },
+  {
+    "id": 26,
+    "word": "competition",
+    "meaning": "競技会、競争",
+    "rank": "A"
+  },
+  {
+    "id": 27,
+    "word": "complaint",
+    "meaning": "苦情、不平",
+    "rank": "A"
+  },
+  {
+    "id": 28,
+    "word": "condition",
+    "meaning": "状態、条件",
+    "rank": "A"
+  },
+  {
+    "id": 29,
+    "word": "connection",
+    "meaning": "接続、関係",
+    "rank": "A"
+  },
+  {
+    "id": 30,
+    "word": "customer",
+    "meaning": "顧客、客",
+    "rank": "S"
+  },
+  {
+    "id": 31,
+    "word": "damage",
+    "meaning": "損害、被害",
+    "rank": "A"
+  },
+  {
+    "id": 32,
+    "word": "danger",
+    "meaning": "危険",
+    "rank": "A"
+  },
+  {
+    "id": 33,
+    "word": "decision",
+    "meaning": "決定、決心",
+    "rank": "S"
+  },
+  {
+    "id": 34,
+    "word": "delay",
+    "meaning": "遅延、遅れ",
+    "rank": "A"
+  },
+  {
+    "id": 35,
+    "word": "delivery",
+    "meaning": "配達、配送",
+    "rank": "A"
+  },
+  {
+    "id": 36,
+    "word": "demand",
+    "meaning": "需要、要求",
+    "rank": "A"
+  },
+  {
+    "id": 37,
+    "word": "departure",
+    "meaning": "出発",
+    "rank": "A"
+  },
+  {
+    "id": 38,
+    "word": "description",
+    "meaning": "描写、説明",
+    "rank": "A"
+  },
+  {
+    "id": 39,
+    "word": "destination",
+    "meaning": "目的地",
+    "rank": "A"
+  },
+  {
+    "id": 40,
+    "word": "development",
+    "meaning": "発達、開発",
+    "rank": "A"
+  },
+  {
+    "id": 41,
+    "word": "difference",
+    "meaning": "違い、差",
+    "rank": "A"
+  },
+  {
+    "id": 42,
+    "word": "difficulty",
+    "meaning": "困難",
+    "rank": "A"
+  },
+  {
+    "id": 43,
+    "word": "discount",
+    "meaning": "割引",
+    "rank": "A"
+  },
+  {
+    "id": 44,
+    "word": "discovery",
+    "meaning": "発見",
+    "rank": "A"
+  },
+  {
+    "id": 45,
+    "word": "discussion",
+    "meaning": "話し合い、議論",
+    "rank": "A"
+  },
+  {
+    "id": 46,
+    "word": "distance",
+    "meaning": "距離",
+    "rank": "A"
+  },
+  {
+    "id": 47,
+    "word": "effort",
+    "meaning": "努力",
+    "rank": "A"
+  },
+  {
+    "id": 48,
+    "word": "election",
+    "meaning": "選挙",
+    "rank": "A"
+  },
+  {
+    "id": 49,
+    "word": "electricity",
+    "meaning": "電気",
+    "rank": "A"
+  },
+  {
+    "id": 50,
+    "word": "employee",
+    "meaning": "従業員",
+    "rank": "A"
+  },
+  {
+    "id": 51,
+    "word": "energy",
+    "meaning": "エネルギー",
+    "rank": "A"
+  },
+  {
+    "id": 52,
+    "word": "environment",
+    "meaning": "環境",
+    "rank": "S"
+  },
+  {
+    "id": 53,
+    "word": "equipment",
+    "meaning": "機器、用具",
+    "rank": "A"
+  },
+  {
+    "id": 54,
+    "word": "event",
+    "meaning": "出来事、行事",
+    "rank": "A"
+  },
+  {
+    "id": 55,
+    "word": "evidence",
+    "meaning": "証拠",
+    "rank": "A"
+  },
+  {
+    "id": 56,
+    "word": "examination",
+    "meaning": "試験、検査",
+    "rank": "A"
+  },
+  {
+    "id": 57,
+    "word": "exercise",
+    "meaning": "運動、練習",
+    "rank": "A"
+  },
+  {
+    "id": 58,
+    "word": "exhibition",
+    "meaning": "展覧会、展示",
+    "rank": "A"
+  },
+  {
+    "id": 59,
+    "word": "experience",
+    "meaning": "経験",
+    "rank": "S"
+  },
+  {
+    "id": 60,
+    "word": "explanation",
+    "meaning": "説明",
+    "rank": "A"
+  },
+  {
+    "id": 61,
+    "word": "expression",
+    "meaning": "表現、表情",
+    "rank": "A"
+  },
+  {
+    "id": 62,
+    "word": "failure",
+    "meaning": "失敗",
+    "rank": "A"
+  },
+  {
+    "id": 63,
+    "word": "flight",
+    "meaning": "飛行機便、フライト",
+    "rank": "A"
+  },
+  {
+    "id": 64,
+    "word": "garbage",
+    "meaning": "ゴミ",
+    "rank": "A"
+  },
+  {
+    "id": 65,
+    "word": "generation",
+    "meaning": "世代",
+    "rank": "B"
+  },
+  {
+    "id": 66,
+    "word": "government",
+    "meaning": "政府",
+    "rank": "A"
+  },
+  {
+    "id": 67,
+    "word": "habit",
+    "meaning": "習慣、癖",
+    "rank": "A"
+  },
+  {
+    "id": 68,
+    "word": "health",
+    "meaning": "健康",
+    "rank": "S"
+  },
+  {
+    "id": 69,
+    "word": "impression",
+    "meaning": "印象",
+    "rank": "A"
+  },
+  {
+    "id": 70,
+    "word": "improvement",
+    "meaning": "改善、上達",
+    "rank": "A"
+  },
+  {
+    "id": 71,
+    "word": "influence",
+    "meaning": "影響、影響力",
+    "rank": "A"
+  },
+  {
+    "id": 72,
+    "word": "ingredient",
+    "meaning": "材料、成分",
+    "rank": "A"
+  },
+  {
+    "id": 73,
+    "word": "instruction",
+    "meaning": "指示、説明書",
+    "rank": "A"
+  },
+  {
+    "id": 74,
+    "word": "invitation",
+    "meaning": "招待、招待状",
+    "rank": "A"
+  },
+  {
+    "id": 75,
+    "word": "material",
+    "meaning": "材料、資料",
+    "rank": "A"
+  },
+  {
+    "id": 76,
+    "word": "memory",
+    "meaning": "記憶、思い出",
+    "rank": "A"
+  },
+  {
+    "id": 77,
+    "word": "neighbor",
+    "meaning": "近所の人、隣人",
+    "rank": "A"
+  },
+  {
+    "id": 78,
+    "word": "opportunity",
+    "meaning": "機会、チャンス",
+    "rank": "S"
+  },
+  {
+    "id": 79,
+    "word": "passenger",
+    "meaning": "乗客",
+    "rank": "S"
+  },
+  {
+    "id": 80,
+    "word": "performance",
+    "meaning": "公演、実績",
+    "rank": "A"
+  },
+  {
+    "id": 81,
+    "word": "permission",
+    "meaning": "許可",
+    "rank": "A"
+  },
+  {
+    "id": 82,
+    "word": "population",
+    "meaning": "人口",
+    "rank": "A"
+  },
+  {
+    "id": 83,
+    "word": "preparation",
+    "meaning": "準備",
+    "rank": "A"
+  },
+  {
+    "id": 84,
+    "word": "promise",
+    "meaning": "約束",
+    "rank": "A"
+  },
+  {
+    "id": 85,
+    "word": "protection",
+    "meaning": "保護",
+    "rank": "A"
+  },
+  {
+    "id": 86,
+    "word": "receipt",
+    "meaning": "領収書、レシート",
+    "rank": "A"
+  },
+  {
+    "id": 87,
+    "word": "recipe",
+    "meaning": "調理法、レシピ",
+    "rank": "A"
+  },
+  {
+    "id": 88,
+    "word": "relationship",
+    "meaning": "関係、人間関係",
+    "rank": "A"
+  },
+  {
+    "id": 89,
+    "word": "reputation",
+    "meaning": "評判",
+    "rank": "B"
+  },
+  {
+    "id": 90,
+    "word": "result",
+    "meaning": "結果",
+    "rank": "S"
+  },
+  {
+    "id": 91,
+    "word": "schedule",
+    "meaning": "予定、スケジュール",
+    "rank": "S"
+  },
+  {
+    "id": 92,
+    "word": "secret",
+    "meaning": "秘密",
+    "rank": "A"
+  },
+  {
+    "id": 93,
+    "word": "signal",
+    "meaning": "信号、合図",
+    "rank": "A"
+  },
+  {
+    "id": 94,
+    "word": "situation",
+    "meaning": "状況、立場",
+    "rank": "A"
+  },
+  {
+    "id": 95,
+    "word": "society",
+    "meaning": "社会",
+    "rank": "A"
+  },
+  {
+    "id": 96,
+    "word": "suggestion",
+    "meaning": "提案",
+    "rank": "A"
+  },
+  {
+    "id": 97,
+    "word": "temperature",
+    "meaning": "温度、体温",
+    "rank": "A"
+  },
+  {
+    "id": 98,
+    "word": "traffic",
+    "meaning": "交通、交通量",
+    "rank": "A"
+  },
+  {
+    "id": 99,
+    "word": "volunteer",
+    "meaning": "ボランティア",
+    "rank": "A"
+  },
+  {
+    "id": 100,
+    "word": "wealth",
+    "meaning": "富、財産",
+    "rank": "B"
+  },
+  {
+    "id": 101,
+    "word": "allow",
+    "meaning": "〜を許可する",
+    "rank": "S"
+  },
+  {
+    "id": 102,
+    "word": "avoid",
+    "meaning": "〜を避ける",
+    "rank": "S"
+  },
+  {
+    "id": 103,
+    "word": "advise",
+    "meaning": "〜に助言する",
+    "rank": "S"
+  },
+  {
+    "id": 104,
+    "word": "accept",
+    "meaning": "〜を受け入れる",
+    "rank": "S"
+  },
+  {
+    "id": 105,
+    "word": "achieve",
+    "meaning": "〜を達成する",
+    "rank": "S"
+  },
+  {
+    "id": 106,
+    "word": "admire",
+    "meaning": "〜に感心する、称賛する",
+    "rank": "A"
+  },
+  {
+    "id": 107,
+    "word": "admit",
+    "meaning": "〜を認める",
+    "rank": "A"
+  },
+  {
+    "id": 108,
+    "word": "afford",
+    "meaning": "〜する余裕がある",
+    "rank": "S"
+  },
+  {
+    "id": 109,
+    "word": "announce",
+    "meaning": "〜を発表する",
+    "rank": "A"
+  },
+  {
+    "id": 110,
+    "word": "apologize",
+    "meaning": "謝罪する",
+    "rank": "S"
+  },
+  {
+    "id": 111,
+    "word": "appear",
+    "meaning": "現れる、〜のように見える",
+    "rank": "A"
+  },
+  {
+    "id": 112,
+    "word": "apply",
+    "meaning": "申し込む、適用する",
+    "rank": "A"
+  },
+  {
+    "id": 113,
+    "word": "appreciate",
+    "meaning": "〜に感謝する",
+    "rank": "S"
+  },
+  {
+    "id": 114,
+    "word": "approve",
+    "meaning": "〜を承認する",
+    "rank": "A"
+  },
+  {
+    "id": 115,
+    "word": "arrange",
+    "meaning": "〜の手配をする、整列させ",
+    "rank": "A"
+  },
+  {
+    "id": 116,
+    "word": "arrive",
+    "meaning": "到着する",
+    "rank": "S"
+  },
+  {
+    "id": 117,
+    "word": "attract",
+    "meaning": "〜を引きつける",
+    "rank": "A"
+  },
+  {
+    "id": 118,
+    "word": "belong",
+    "meaning": "〜に所属する、〜の所有",
+    "rank": "S"
+  },
+  {
+    "id": 119,
+    "word": "borrow",
+    "meaning": "〜を借りる",
+    "rank": "S"
+  },
+  {
+    "id": 120,
+    "word": "calculate",
+    "meaning": "〜を計算する",
+    "rank": "A"
+  },
+  {
+    "id": 121,
+    "word": "cancel",
+    "meaning": "〜を中止する、キャンセル",
+    "rank": "S"
+  },
+  {
+    "id": 122,
+    "word": "cause",
+    "meaning": "〜を引き起こす",
+    "rank": "S"
+  },
+  {
+    "id": 123,
+    "word": "celebrate",
+    "meaning": "〜をお祝いする",
+    "rank": "S"
+  },
+  {
+    "id": 124,
+    "word": "collect",
+    "meaning": "〜を集める",
+    "rank": "A"
+  },
+  {
+    "id": 125,
+    "word": "compare",
+    "meaning": "〜を比較する",
+    "rank": "A"
+  },
+  {
+    "id": 126,
+    "word": "complain",
+    "meaning": "苦情を言う、不平を言う",
+    "rank": "A"
+  },
+  {
+    "id": 127,
+    "word": "confirm",
+    "meaning": "〜を確認する",
+    "rank": "A"
+  },
+  {
+    "id": 128,
+    "word": "connect",
+    "meaning": "〜をつなぐ、接続する",
+    "rank": "A"
+  },
+  {
+    "id": 129,
+    "word": "consider",
+    "meaning": "〜を検討する、よく考える",
+    "rank": "S"
+  },
+  {
+    "id": 130,
+    "word": "continue",
+    "meaning": "〜を続ける、続く",
+    "rank": "S"
+  },
+  {
+    "id": 131,
+    "word": "contribute",
+    "meaning": "〜に貢献する、寄付する",
+    "rank": "A"
+  },
+  {
+    "id": 132,
+    "word": "control",
+    "meaning": "〜を制御する、管理する",
+    "rank": "A"
+  },
+  {
+    "id": 133,
+    "word": "convince",
+    "meaning": "〜を説得する、納得させる",
+    "rank": "A"
+  },
+  {
+    "id": 134,
+    "word": "create",
+    "meaning": "〜を創造する、作り出す",
+    "rank": "S"
+  },
+  {
+    "id": 135,
+    "word": "damage",
+    "meaning": "〜に損害を与える",
+    "rank": "A"
+  },
+  {
+    "id": 136,
+    "word": "decide",
+    "meaning": "〜を決める、決心する",
+    "rank": "S"
+  },
+  {
+    "id": 137,
+    "word": "decrease",
+    "meaning": "〜を減らす、減少する",
+    "rank": "A"
+  },
+  {
+    "id": 138,
+    "word": "delay",
+    "meaning": "〜を遅らせる",
+    "rank": "A"
+  },
+  {
+    "id": 139,
+    "word": "deliver",
+    "meaning": "〜を配達する",
+    "rank": "A"
+  },
+  {
+    "id": 140,
+    "word": "demand",
+    "meaning": "〜を要求する",
+    "rank": "A"
+  },
+  {
+    "id": 141,
+    "word": "depend",
+    "meaning": "〜による、頼る",
+    "rank": "S"
+  },
+  {
+    "id": 142,
+    "word": "describe",
+    "meaning": "〜を言葉で描写する、説",
+    "rank": "S"
+  },
+  {
+    "id": 143,
+    "word": "destroy",
+    "meaning": "〜を破壊する",
+    "rank": "A"
+  },
+  {
+    "id": 144,
+    "word": "develop",
+    "meaning": "〜を開発する、発達させる",
+    "rank": "S"
+  },
+  {
+    "id": 145,
+    "word": "disappear",
+    "meaning": "姿を消す、消える",
+    "rank": "A"
+  },
+  {
+    "id": 146,
+    "word": "discover",
+    "meaning": "〜を発見する",
+    "rank": "S"
+  },
+  {
+    "id": 147,
+    "word": "discuss",
+    "meaning": "〜について話し合う",
+    "rank": "S"
+  },
+  {
+    "id": 148,
+    "word": "divide",
+    "meaning": "〜を分ける、分割する",
+    "rank": "A"
+  },
+  {
+    "id": 149,
+    "word": "encourage",
+    "meaning": "〜を励ます、促進する",
+    "rank": "S"
+  },
+  {
+    "id": 150,
+    "word": "escape",
+    "meaning": "〜から逃げる、回避する",
+    "rank": "S"
+  },
+  {
+    "id": 151,
+    "word": "examine",
+    "meaning": "〜を調査する、診察する",
+    "rank": "A"
+  },
+  {
+    "id": 152,
+    "word": "exchange",
+    "meaning": "〜を交換する",
+    "rank": "S"
+  },
+  {
+    "id": 153,
+    "word": "expect",
+    "meaning": "〜を予期する、期待する",
+    "rank": "S"
+  },
+  {
+    "id": 154,
+    "word": "explain",
+    "meaning": "〜を説明する",
+    "rank": "S"
+  },
+  {
+    "id": 155,
+    "word": "express",
+    "meaning": "〜を表現する",
+    "rank": "A"
+  },
+  {
+    "id": 156,
+    "word": "fail",
+    "meaning": "〜に不合格になる、失敗",
+    "rank": "S"
+  },
+  {
+    "id": 157,
+    "word": "feed",
+    "meaning": "〜にエサを与える",
+    "rank": "A"
+  },
+  {
+    "id": 158,
+    "word": "fix",
+    "meaning": "〜を修理する、固定する",
+    "rank": "S"
+  },
+  {
+    "id": 159,
+    "word": "follow",
+    "meaning": "〜に従う、〜の後について",
+    "rank": "S"
+  },
+  {
+    "id": 160,
+    "word": "forgive",
+    "meaning": "〜を許す",
+    "rank": "A"
+  },
+  {
+    "id": 161,
+    "word": "freeze",
+    "meaning": "凍る、〜を凍らせる",
+    "rank": "A"
+  },
+  {
+    "id": 162,
+    "word": "gather",
+    "meaning": "〜を集める、集まる",
+    "rank": "A"
+  },
+  {
+    "id": 163,
+    "word": "handle",
+    "meaning": "〜を扱う、処理する",
+    "rank": "S"
+  },
+  {
+    "id": 164,
+    "word": "ignore",
+    "meaning": "〜を無視する",
+    "rank": "A"
+  },
+  {
+    "id": 165,
+    "word": "imagine",
+    "meaning": "〜を想像する",
+    "rank": "A"
+  },
+  {
+    "id": 166,
+    "word": "improve",
+    "meaning": "〜を改善する、向上させる",
+    "rank": "S"
+  },
+  {
+    "id": 167,
+    "word": "include",
+    "meaning": "〜を含む",
+    "rank": "S"
+  },
+  {
+    "id": 168,
+    "word": "increase",
+    "meaning": "〜を増やす、増加する",
+    "rank": "S"
+  },
+  {
+    "id": 169,
+    "word": "influence",
+    "meaning": "〜に影響を与える",
+    "rank": "A"
+  },
+  {
+    "id": 170,
+    "word": "inform",
+    "meaning": "〜に知らせる",
+    "rank": "A"
+  },
+  {
+    "id": 171,
+    "word": "injure",
+    "meaning": "〜に怪我をさせる",
+    "rank": "A"
+  },
+  {
+    "id": 172,
+    "word": "insist",
+    "meaning": "〜と主張する、言い張る",
+    "rank": "A"
+  },
+  {
+    "id": 173,
+    "word": "introduce",
+    "meaning": "〜を紹介する、導入する",
+    "rank": "S"
+  },
+  {
+    "id": 174,
+    "word": "invite",
+    "meaning": "〜を招待する",
+    "rank": "S"
+  },
+  {
+    "id": 175,
+    "word": "manage",
+    "meaning": "〜を管理する、何とかやり",
+    "rank": "S"
+  },
+  {
+    "id": 176,
+    "word": "mention",
+    "meaning": "〜について言及する、触",
+    "rank": "A"
+  },
+  {
+    "id": 177,
+    "word": "notice",
+    "meaning": "〜に気づく",
+    "rank": "S"
+  },
+  {
+    "id": 178,
+    "word": "obtain",
+    "meaning": "〜を手に入れる、獲得する",
+    "rank": "B"
+  },
+  {
+    "id": 179,
+    "word": "offer",
+    "meaning": "〜を提供する、申し出る",
+    "rank": "S"
+  },
+  {
+    "id": 180,
+    "word": "order",
+    "meaning": "〜を注文する、命じる",
+    "rank": "S"
+  },
+  {
+    "id": 181,
+    "word": "organize",
+    "meaning": "〜を組織する、準備する",
+    "rank": "A"
+  },
+  {
+    "id": 182,
+    "word": "perform",
+    "meaning": "〜を演じる、実行する",
+    "rank": "A"
+  },
+  {
+    "id": 183,
+    "word": "permit",
+    "meaning": "〜を許可する",
+    "rank": "A"
+  },
+  {
+    "id": 184,
+    "word": "persuade",
+    "meaning": "〜を説得する",
+    "rank": "A"
+  },
+  {
+    "id": 185,
+    "word": "postpone",
+    "meaning": "〜を延期する",
+    "rank": "S"
+  },
+  {
+    "id": 186,
+    "word": "prefer",
+    "meaning": "〜をより好む",
+    "rank": "S"
+  },
+  {
+    "id": 187,
+    "word": "prepare",
+    "meaning": "〜を準備する",
+    "rank": "S"
+  },
+  {
+    "id": 188,
+    "word": "prevent",
+    "meaning": "〜を予防する、防ぐ",
+    "rank": "S"
+  },
+  {
+    "id": 189,
+    "word": "produce",
+    "meaning": "〜を生産する、製造する",
+    "rank": "S"
+  },
+  {
+    "id": 190,
+    "word": "protect",
+    "meaning": "〜を保護する、守る",
+    "rank": "S"
+  },
+  {
+    "id": 191,
+    "word": "provide",
+    "meaning": "〜を提供する",
+    "rank": "S"
+  },
+  {
+    "id": 192,
+    "word": "raise",
+    "meaning": "〜を上げる、育てる",
+    "rank": "S"
+  },
+  {
+    "id": 193,
+    "word": "reach",
+    "meaning": "〜に到達する、手を伸ば",
+    "rank": "S"
+  },
+  {
+    "id": 194,
+    "word": "receive",
+    "meaning": "〜を受け取る",
+    "rank": "S"
+  },
+  {
+    "id": 195,
+    "word": "recommend",
+    "meaning": "〜を推薦する、お勧めする",
+    "rank": "S"
+  },
+  {
+    "id": 196,
+    "word": "reduce",
+    "meaning": "〜を減らす、削減する",
+    "rank": "S"
+  },
+  {
+    "id": 197,
+    "word": "refuse",
+    "meaning": "〜を断る、拒絶する",
+    "rank": "A"
+  },
+  {
+    "id": 198,
+    "word": "remind",
+    "meaning": "〜に思い出させる",
+    "rank": "S"
+  },
+  {
+    "id": 199,
+    "word": "replace",
+    "meaning": "〜を取り替える、後任にな",
+    "rank": "A"
+  },
+  {
+    "id": 200,
+    "word": "require",
+    "meaning": "〜を必要とする、要求する",
+    "rank": "S"
+  },
+  {
+    "id": 201,
+    "word": "comfortable",
+    "meaning": "快適な、心地よい",
+    "rank": "S"
+  },
+  {
+    "id": 202,
+    "word": "delicate",
+    "meaning": "壊れやすい、繊細な",
+    "rank": "S"
+  },
+  {
+    "id": 203,
+    "word": "basic",
+    "meaning": "基本的な、初歩の",
+    "rank": "S"
+  },
+  {
+    "id": 204,
+    "word": "bright",
+    "meaning": "眩しい、明るい",
+    "rank": "S"
+  },
+  {
+    "id": 205,
+    "word": "tight",
+    "meaning": "きつい、窮屈な",
+    "rank": "S"
+  },
+  {
+    "id": 206,
+    "word": "valuable",
+    "meaning": "貴重な、価値のある",
+    "rank": "S"
+  },
+  {
+    "id": 207,
+    "word": "similar",
+    "meaning": "似ている、同様の",
+    "rank": "S"
+  },
+  {
+    "id": 208,
+    "word": "convenient",
+    "meaning": "便利な、都合が良い",
+    "rank": "S"
+  },
+  {
+    "id": 209,
+    "word": "frequent",
+    "meaning": "頻繁な",
+    "rank": "A"
+  },
+  {
+    "id": 210,
+    "word": "accurate",
+    "meaning": "正確な",
+    "rank": "A"
+  },
+  {
+    "id": 211,
+    "word": "active",
+    "meaning": "活動的な、積極的な",
+    "rank": "A"
+  },
+  {
+    "id": 212,
+    "word": "actual",
+    "meaning": "実際の、現実の",
+    "rank": "A"
+  },
+  {
+    "id": 213,
+    "word": "ancient",
+    "meaning": "古代の、昔の",
+    "rank": "A"
+  },
+  {
+    "id": 214,
+    "word": "annual",
+    "meaning": "年に一度の、毎年の",
+    "rank": "A"
+  },
+  {
+    "id": 215,
+    "word": "anxious",
+    "meaning": "心配して、切望して",
+    "rank": "A"
+  },
+  {
+    "id": 216,
+    "word": "apparent",
+    "meaning": "明白な、一見〜らしい",
+    "rank": "B"
+  },
+  {
+    "id": 217,
+    "word": "appropriate",
+    "meaning": "適切な",
+    "rank": "A"
+  },
+  {
+    "id": 218,
+    "word": "attractive",
+    "meaning": "魅力的の",
+    "rank": "A"
+  },
+  {
+    "id": 219,
+    "word": "automatic",
+    "meaning": "自動の",
+    "rank": "A"
+  },
+  {
+    "id": 220,
+    "word": "available",
+    "meaning": "利用可能な、手に入る",
+    "rank": "S"
+  },
+  {
+    "id": 221,
+    "word": "average",
+    "meaning": "平均の、普通の",
+    "rank": "A"
+  },
+  {
+    "id": 222,
+    "word": "aware",
+    "meaning": "気づいて、知って",
+    "rank": "A"
+  },
+  {
+    "id": 223,
+    "word": "awful",
+    "meaning": "ひどい、嫌な",
+    "rank": "A"
+  },
+  {
+    "id": 224,
+    "word": "bitter",
+    "meaning": "苦い、厳しい",
+    "rank": "A"
+  },
+  {
+    "id": 225,
+    "word": "blind",
+    "meaning": "目の見えない",
+    "rank": "A"
+  },
+  {
+    "id": 226,
+    "word": "calm",
+    "meaning": "冷静な、穏やかな",
+    "rank": "A"
+  },
+  {
+    "id": 227,
+    "word": "certain",
+    "meaning": "確信して、特定の",
+    "rank": "S"
+  },
+  {
+    "id": 228,
+    "word": "chemical",
+    "meaning": "化学の、化学物質の",
+    "rank": "A"
+  },
+  {
+    "id": 229,
+    "word": "chief",
+    "meaning": "主たる、最高の",
+    "rank": "A"
+  },
+  {
+    "id": 230,
+    "word": "classic",
+    "meaning": "古典的な、伝統的な",
+    "rank": "A"
+  },
+  {
+    "id": 231,
+    "word": "commercial",
+    "meaning": "商業の、営利目的の",
+    "rank": "A"
+  },
+  {
+    "id": 232,
+    "word": "common",
+    "meaning": "共通の、一般的な",
+    "rank": "S"
+  },
+  {
+    "id": 233,
+    "word": "complete",
+    "meaning": "完全な、完成した",
+    "rank": "A"
+  },
+  {
+    "id": 234,
+    "word": "complex",
+    "meaning": "複雑な",
+    "rank": "A"
+  },
+  {
+    "id": 235,
+    "word": "confident",
+    "meaning": "自信がある",
+    "rank": "S"
+  },
+  {
+    "id": 236,
+    "word": "conscious",
+    "meaning": "意識がある、気づいて",
+    "rank": "A"
+  },
+  {
+    "id": 237,
+    "word": "dull",
+    "meaning": "退屈な、冴えない",
+    "rank": "S"
+  },
+  {
+    "id": 238,
+    "word": "effective",
+    "meaning": "効果的な",
+    "rank": "A"
+  },
+  {
+    "id": 239,
+    "word": "efficient",
+    "meaning": "効率的な",
+    "rank": "A"
+  },
+  {
+    "id": 240,
+    "word": "entire",
+    "meaning": "全体の、すべての",
+    "rank": "A"
+  },
+  {
+    "id": 241,
+    "word": "essential",
+    "meaning": "不可欠な、本質的な",
+    "rank": "S"
+  },
+  {
+    "id": 242,
+    "word": "familiar",
+    "meaning": "よく知られた、身近な",
+    "rank": "S"
+  },
+  {
+    "id": 243,
+    "word": "financial",
+    "meaning": "財政上の、金融の",
+    "rank": "A"
+  },
+  {
+    "id": 244,
+    "word": "foreign",
+    "meaning": "外国の",
+    "rank": "S"
+  },
+  {
+    "id": 245,
+    "word": "formal",
+    "meaning": "正式な、礼儀正しい",
+    "rank": "A"
+  },
+  {
+    "id": 246,
+    "word": "gentle",
+    "meaning": "優しく穏やかな",
+    "rank": "A"
+  },
+  {
+    "id": 247,
+    "word": "huge",
+    "meaning": "巨大な、莫大な",
+    "rank": "S"
+  },
+  {
+    "id": 248,
+    "word": "individual",
+    "meaning": "個人の、個々の",
+    "rank": "A"
+  },
+  {
+    "id": 249,
+    "word": "initial",
+    "meaning": "初期の、最初の",
+    "rank": "A"
+  },
+  {
+    "id": 250,
+    "word": "logical",
+    "meaning": "論理的な",
+    "rank": "A"
+  },
+  {
+    "id": 251,
+    "word": "major",
+    "meaning": "主要な、大きい方の",
+    "rank": "S"
+  },
+  {
+    "id": 252,
+    "word": "minor",
+    "meaning": "軽微な、小さい方の",
+    "rank": "A"
+  },
+  {
+    "id": 253,
+    "word": "necessary",
+    "meaning": "必要な",
+    "rank": "S"
+  },
+  {
+    "id": 254,
+    "word": "negative",
+    "meaning": "否定的な、マイナスの",
+    "rank": "A"
+  },
+  {
+    "id": 255,
+    "word": "particular",
+    "meaning": "特定の、こだわりのある",
+    "rank": "A"
+  },
+  {
+    "id": 256,
+    "word": "polite",
+    "meaning": "丁寧な、礼儀正しい",
+    "rank": "S"
+  },
+  {
+    "id": 257,
+    "word": "positive",
+    "meaning": "肯定的な、前向きな",
+    "rank": "S"
+  },
+  {
+    "id": 258,
+    "word": "precious",
+    "meaning": "貴重な、大切な",
+    "rank": "A"
+  },
+  {
+    "id": 259,
+    "word": "previous",
+    "meaning": "前の、以前の",
+    "rank": "A"
+  },
+  {
+    "id": 260,
+    "word": "private",
+    "meaning": "私的な、個人の",
+    "rank": "A"
+  },
+  {
+    "id": 261,
+    "word": "proper",
+    "meaning": "適切な、望ましい",
+    "rank": "A"
+  },
+  {
+    "id": 262,
+    "word": "rare",
+    "meaning": "珍しい、稀な",
+    "rank": "A"
+  },
+  {
+    "id": 263,
+    "word": "recent",
+    "meaning": "最近の",
+    "rank": "S"
+  },
+  {
+    "id": 264,
+    "word": "regular",
+    "meaning": "定期的な、通常の",
+    "rank": "S"
+  },
+  {
+    "id": 265,
+    "word": "healthy",
+    "meaning": "健康的な",
+    "rank": "S"
+  },
+  {
+    "id": 266,
+    "word": "recently",
+    "meaning": "最近、近頃",
+    "rank": "S"
+  },
+  {
+    "id": 267,
+    "word": "gradually",
+    "meaning": "徐々に、だんだんと",
+    "rank": "S"
+  },
+  {
+    "id": 268,
+    "word": "immediately",
+    "meaning": "直ちに、すぐに",
+    "rank": "S"
+  },
+  {
+    "id": 269,
+    "word": "naturally",
+    "meaning": "自然に、当然ながら",
+    "rank": "A"
+  },
+  {
+    "id": 270,
+    "word": "luckily",
+    "meaning": "幸運にも",
+    "rank": "S"
+  },
+  {
+    "id": 271,
+    "word": "frankly",
+    "meaning": "率直に言って",
+    "rank": "A"
+  },
+  {
+    "id": 272,
+    "word": "basically",
+    "meaning": "基本的に、だいたい",
+    "rank": "S"
+  },
+  {
+    "id": 273,
+    "word": "forever",
+    "meaning": "永遠に、いつまでも",
+    "rank": "S"
+  },
+  {
+    "id": 274,
+    "word": "actually",
+    "meaning": "実は、実際には",
+    "rank": "S"
+  },
+  {
+    "id": 275,
+    "word": "certainly",
+    "meaning": "確かに、きっと",
+    "rank": "S"
+  },
+  {
+    "id": 276,
+    "word": "completely",
+    "meaning": "完全に",
+    "rank": "S"
+  },
+  {
+    "id": 277,
+    "word": "definitely",
+    "meaning": "絶対に、明確に",
+    "rank": "S"
+  },
+  {
+    "id": 278,
+    "word": "especially",
+    "meaning": "特に",
+    "rank": "S"
+  },
+  {
+    "id": 279,
+    "word": "eventually",
+    "meaning": "最終的には、結局は",
+    "rank": "S"
+  },
+  {
+    "id": 280,
+    "word": "extremely",
+    "meaning": "極めて、非常に",
+    "rank": "S"
+  },
+  {
+    "id": 281,
+    "word": "generally",
+    "meaning": "一般的に",
+    "rank": "A"
+  },
+  {
+    "id": 282,
+    "word": "hardly",
+    "meaning": "ほとんど〜ない",
+    "rank": "S"
+  },
+  {
+    "id": 283,
+    "word": "instead",
+    "meaning": "代わりに",
+    "rank": "S"
+  },
+  {
+    "id": 284,
+    "word": "mostly",
+    "meaning": "大部分は、たいてい",
+    "rank": "A"
+  },
+  {
+    "id": 285,
+    "word": "nearly",
+    "meaning": "ほぼ、もう少しで",
+    "rank": "S"
+  },
+  {
+    "id": 286,
+    "word": "obviously",
+    "meaning": "明らかに",
+    "rank": "A"
+  },
+  {
+    "id": 287,
+    "word": "particularly",
+    "meaning": "特に、とりわけ",
+    "rank": "A"
+  },
+  {
+    "id": 288,
+    "word": "properly",
+    "meaning": "適切に、ちゃんと",
+    "rank": "A"
+  },
+  {
+    "id": 289,
+    "word": "rarely",
+    "meaning": "めったに〜ない",
+    "rank": "A"
+  },
+  {
+    "id": 290,
+    "word": "seriously",
+    "meaning": "真剣に、深刻に",
+    "rank": "A"
+  },
+  {
+    "id": 291,
+    "word": "although",
+    "meaning": "〜にもかかわらず",
+    "rank": "S"
+  },
+  {
+    "id": 292,
+    "word": "unless",
+    "meaning": "〜でない限り",
+    "rank": "S"
+  },
+  {
+    "id": 293,
+    "word": "while",
+    "meaning": "〜する間に、〜の一方で",
+    "rank": "S"
+  },
+  {
+    "id": 294,
+    "word": "whether",
+    "meaning": "〜かどうか",
+    "rank": "S"
+  },
+  {
+    "id": 295,
+    "word": "since",
+    "meaning": "〜以来、〜なので",
+    "rank": "S"
+  },
+  {
+    "id": 296,
+    "word": "though",
+    "meaning": "〜だけれども",
+    "rank": "A"
+  },
+  {
+    "id": 297,
+    "word": "besides",
+    "meaning": "〜に加えて、それに",
+    "rank": "A"
+  },
+  {
+    "id": 298,
+    "word": "however",
+    "meaning": "しかしながら",
+    "rank": "S"
+  },
+  {
+    "id": 299,
+    "word": "therefore",
+    "meaning": "それゆえに、したがって",
+    "rank": "A"
+  },
+  {
+    "id": 300,
+    "word": "otherwise",
+    "meaning": "さもなければ",
+    "rank": "A"
+  }
+];
+
+
+let level = null;
+let pool = [];
+let questionQueue = [];
+let queueIndex = 0;
+let current = null;
+let streak = 0;
+let mistakes = 0;
+let locked = false;
+let timerInterval = null;
+let timeLeft = 10;
+
+const $ = (id) => document.getElementById(id);
+const startScreen = $("startScreen");
+const quizScreen = $("quizScreen");
+const resultScreen = $("resultScreen");
+
+const levelNames = {S:"LEVEL 1｜S：最頻出", A:"LEVEL 2｜A：必須", B:"LEVEL 3｜B：合格圏内"};
+
+function shuffle(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+function stopTimer(){
+  if(timerInterval){
+    clearInterval(timerInterval);
+    timerInterval=null;
+  }
+}
+
+function updateTimer(){
+  $("timer").textContent=`残り ${timeLeft}秒`;
+  $("timer").classList.toggle("danger", timeLeft<=3);
+}
+
+function startTimer(){
+  stopTimer();
+  timeLeft=10;
+  updateTimer();
+  timerInterval=setInterval(()=>{
+    timeLeft--;
+    updateTimer();
+    if(timeLeft<=0){
+      stopTimer();
+      handleTimeout();
+    }
+  },1000);
+}
+
+function startGame(selectedLevel){
+  level=selectedLevel;
+  pool=shuffle(WORDS.filter(w=>w.rank===level));
+  questionQueue=shuffle(pool);
+  queueIndex=0;
+  streak=0; mistakes=0; locked=false;
+  startScreen.classList.add("hidden");
+  resultScreen.classList.add("hidden");
+  quizScreen.classList.remove("hidden");
+  $("levelLabel").textContent=levelNames[level];
+  renderQuestion();
+}
+
+function getNextQuestion(){
+  // 10問以上を同じ周回で重複させないため、シャッフルしたキューから順番に出題。
+  // 単語数が尽きたら再シャッフルして次の周回へ。
+  if(queueIndex>=questionQueue.length){
+    questionQueue=shuffle(pool);
+    queueIndex=0;
+  }
+  return questionQueue[queueIndex++];
+}
+
+function renderQuestion(){
+  locked=false;
+  current=getNextQuestion();
+  $("word").textContent=current.word;
+  $("streakText").textContent=`${streak} / 10`;
+  $("mistakeText").textContent=`おてつき ${mistakes} / 2`;
+  $("progressBar").style.width=`${streak*10}%`;
+
+  const distractors=shuffle(pool.filter(w=>w.id!==current.id)).slice(0,3);
+  const choices=shuffle([current,...distractors]);
+  const box=$("choices");
+  box.innerHTML="";
+  choices.forEach(choice=>{
+    const b=document.createElement("button");
+    b.className="choice";
+    b.textContent=choice.meaning;
+    b.addEventListener("click",()=>answer(choice,b));
+    box.appendChild(b);
+  });
+  const fb=$("feedback");
+  fb.textContent="";
+  fb.className="feedback";
+  startTimer();
+}
+
+function playSound(type){
+  try{
+    const AudioContext=window.AudioContext||window.webkitAudioContext;
+    if(!AudioContext) return;
+    const ctx=new AudioContext();
+    const now=ctx.currentTime;
+    const osc=ctx.createOscillator();
+    const gain=ctx.createGain();
+    osc.connect(gain); gain.connect(ctx.destination);
+    if(type==="correct"){
+      osc.type="sine";
+      osc.frequency.setValueAtTime(660,now);
+      osc.frequency.setValueAtTime(880,now+0.09);
+      gain.gain.setValueAtTime(0.0001,now);
+      gain.gain.exponentialRampToValueAtTime(0.18,now+0.01);
+      gain.gain.exponentialRampToValueAtTime(0.0001,now+0.22);
+      osc.start(now); osc.stop(now+0.23);
+    }else{
+      osc.type="square";
+      osc.frequency.setValueAtTime(220,now);
+      osc.frequency.setValueAtTime(160,now+0.12);
+      gain.gain.setValueAtTime(0.0001,now);
+      gain.gain.exponentialRampToValueAtTime(0.12,now+0.01);
+      gain.gain.exponentialRampToValueAtTime(0.0001,now+0.24);
+      osc.start(now); osc.stop(now+0.25);
+    }
+    osc.addEventListener("ended",()=>ctx.close());
+  }catch(e){
+    // 音声が利用できない環境でもテスト自体は続行。
+  }
+}
+
+function handleTimeout(){
+  if(locked) return;
+  locked=true;
+  const buttons=[...document.querySelectorAll(".choice")];
+  buttons.forEach(b=>b.disabled=true);
+  playSound("wrong");
+  mistakes++;
+  streak=0;
+  const fb=$("feedback");
+  fb.textContent=`時間切れ！ 正解は「${current.meaning}」`;
+  fb.className="feedback ng";
+  $("streakText").textContent="0 / 10";
+  $("mistakeText").textContent=`おてつき ${mistakes} / 2`;
+  $("progressBar").style.width="0%";
+  const correctBtn=buttons.find(b=>b.textContent===current.meaning);
+  if(correctBtn) correctBtn.classList.add("correct");
+  if(mistakes>=2){setTimeout(()=>finish(false),850);return;}
+  setTimeout(renderQuestion,850);
+}
+
+function answer(choice, button){
+  if(locked) return;
+  locked=true;
+  stopTimer();
+  const buttons=[...document.querySelectorAll(".choice")];
+  buttons.forEach(b=>b.disabled=true);
+  const fb=$("feedback");
+  if(choice.id===current.id){
+    playSound("correct");
+    button.classList.add("correct");
+    streak++;
+    fb.textContent="正解！";
+    fb.className="feedback ok";
+    $("streakText").textContent=`${streak} / 10`;
+    $("progressBar").style.width=`${streak*10}%`;
+    if(streak>=10){setTimeout(()=>finish(true),500);return;}
+  }else{
+    playSound("wrong");
+    button.classList.add("wrong");
+    const correctBtn=buttons.find(b=>b.textContent===current.meaning);
+    if(correctBtn) correctBtn.classList.add("correct");
+    mistakes++;
+    streak=0;
+    fb.textContent=`不正解。正解は「${current.meaning}」`;
+    fb.className="feedback ng";
+    $("streakText").textContent="0 / 10";
+    $("mistakeText").textContent=`おてつき ${mistakes} / 2`;
+    $("progressBar").style.width="0%";
+    if(mistakes>=2){setTimeout(()=>finish(false),850);return;}
+  }
+  setTimeout(renderQuestion,850);
+}
+
+function finish(passed){
+  stopTimer();
+  quizScreen.classList.add("hidden");
+  resultScreen.classList.remove("hidden");
+  $("resultIcon").textContent=passed?"🎉":"😢";
+  $("resultTitle").textContent=passed?"合格！":"不合格";
+  $("resultMessage").textContent=passed?"10問連続正解、おめでとう！":"おてつきが2回になりました。もう一度挑戦しよう！";
+  $("resultStreak").textContent=`${streak}問`;
+  $("resultMistakes").textContent=`${mistakes}回`;
+}
+
+function goHome(){
+  stopTimer();
+  quizScreen.classList.add("hidden");
+  resultScreen.classList.add("hidden");
+  startScreen.classList.remove("hidden");
+}
+
+document.querySelectorAll(".level").forEach(btn=>btn.addEventListener("click",()=>startGame(btn.dataset.level)));
+$("quitBtn").addEventListener("click",goHome);
+$("homeBtn").addEventListener("click",goHome);
+$("retryBtn").addEventListener("click",()=>startGame(level));
+
+</script>
 </body>
 </html>

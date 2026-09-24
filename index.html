@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>グランドスラム英単語準２級対応</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">GRAND SLAM WORD TEST</p>
+      <h1>グランドスラム英単語準２級対応</h1>
+      <p>青葉ボーイズ専用チェックテストアプリ</p>
+    </header>
+
+    <section id="startScreen" class="card">
+      <h2>レベルを選ぶ</h2>
+      <div class="levels">
+        <button class="level" data-level="S"><span>LEVEL 1</span><strong>S：最頻出</strong><small>まずはここから</small></button>
+        <button class="level" data-level="A"><span>LEVEL 2</span><strong>A：必須</strong><small>合格に向けて強化</small></button>
+        <button class="level" data-level="B"><span>LEVEL 3</span><strong>B：合格圏内</strong><small>仕上げに挑戦</small></button>
+      </div>
+      <div class="rules">
+        <h3>ルール</h3>
+        <ul>
+          <li>10問連続で正解すると <b>合格</b></li>
+          <li>間違い（おてつき）は2回まで</li>
+          <li>2回間違えると <b>不合格</b></li>
+          <li>4択から日本語の意味を選択</li>
+        </ul>
+      </div>
+      <p class="source">単語データ：アップロードされた「英検準2級『超厳選300』単語帳」</p>
+    </section>
+
+    <section id="quizScreen" class="card hidden">
+      <div class="topbar">
+        <button id="quitBtn" class="textBtn">レベル選択に戻る</button>
+        <span id="levelLabel" class="badge"></span>
+      </div>
+      <div id="timer" class="timer">残り 10秒</div>
+      <div class="progressRow">
+        <span id="streakText">0 / 10</span>
+        <span id="mistakeText">おてつき 0 / 2</span>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+
+      <div class="question">
+        <p class="questionLabel">この英単語の意味は？</p>
+        <h2 id="word"></h2>
+      </div>
+
+      <div id="choices" class="choices"></div>
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+    </section>
+
+    <section id="resultScreen" class="card result hidden">
+      <div id="resultIcon" class="resultIcon"></div>
+      <p class="eyebrow">RESULT</p>
+      <h2 id="resultTitle"></h2>
+      <p id="resultMessage"></p>
+      <div class="stats">
+        <div><span>連続正解</span><strong id="resultStreak"></strong></div>
+        <div><span>おてつき</span><strong id="resultMistakes"></strong></div>
+      </div>
+      <div class="resultActions">
+        <button id="retryBtn" class="primary">もう一度挑戦</button>
+        <button id="homeBtn" class="secondary">レベル選択へ</button>
+      </div>
+    </section>
+  </main>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
